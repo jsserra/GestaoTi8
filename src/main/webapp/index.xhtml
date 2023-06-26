@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+
+    <head>
+        <title>GestaoTi 8</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>Gestao Ti 8</h1>
+        <div>
+            <h2>Endereços</h2>
+            <h:dataTable value="#{enderecoBean.listaEnderecos}" var="end">
+                <h:column>
+                    <h:outputText value="#{end.id}"/>
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{end.nome}"/>
+                </h:column>
+            </h:dataTable>
+            <h2>Empresas</h2>
+            <h:dataTable value="#{empresaBean.listaEmpresas}" var="emp">
+                <h:column>
+                    <h:outputText value="#{emp.id}"/>
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{emp.nome}"/>
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{emp.cnpj}"/>
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{emp.idEnd.nome}"/>
+                </h:column>
+            </h:dataTable>
+
+        </div>
+    </body>
+</html>
